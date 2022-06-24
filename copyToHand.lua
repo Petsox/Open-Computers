@@ -1,6 +1,6 @@
 component = require("component")
 debug = component.debug
-local jmeno = debug.getPlayer("Petsox")
+local jmeno = debug.getPlayer("Petsox") -- Změn na svoje jméno
 local svet = jmeno.getWorld()
 
 print("Chceš kopírovat block? ano/ne")
@@ -24,7 +24,7 @@ while (ans == "ano") do
     print("Zadej počet: ")
     local count = io.read()
     
-    svet.insertItem("ProjRed:Exploration:projectred.exploration.barrel", tonumber(count), 0, tostring(svet.getTileNBT(tonumber(X), tonumber(Y), tonumber(Z))), tonumber(Xc), tonumber(Yc), tonumber(Zc), 0)
+    svet.insertItem(svet.getBlock(tonumber(X), tonumber(Y), tonumber(Z)), tonumber(count), 0, tostring(svet.getTileNBT(tonumber(X), tonumber(Y), tonumber(Z))), tonumber(Xc), tonumber(Yc), tonumber(Zc), 0)
 
     print("Kopírovat dál? ano/ne")
     ans = io.read()    
