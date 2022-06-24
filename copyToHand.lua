@@ -1,0 +1,32 @@
+component = require("component")
+debug = component.debug
+local jmeno = debug.getPlayer("Petsox")
+local svet = jmeno.getWorld()
+
+print("Chceš kopírovat block? ano/ne")
+local ans = io.read()
+while (ans == "ano") do
+    local num = 0
+    print("Zadej X bloku, který zkopírovat: ")
+    local X = io.read()
+    print("Zadej Y: ")
+    local Y = io.read()
+    print("Zadej Z: ")
+    local Z = io.read()
+
+    print("Zadej X kam zkopírovat: ")
+    local Xc = io.read()
+    print("Zadej Y: ")
+    local Yc = io.read()
+    print("Zadej Z: ")
+    local Zc = io.read()
+
+    print("Zadej počet: ")
+    local count = io.read()
+    
+    svet.insertItem("ProjRed:Exploration:projectred.exploration.barrel", tonumber(count), 0, tostring(svet.getTileNBT(tonumber(X), tonumber(Y), tonumber(Z))), tonumber(Xc), tonumber(Yc), tonumber(Zc), 0)
+
+    print("Kopírovat dál? ano/ne")
+    ans = io.read()    
+
+end
