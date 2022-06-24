@@ -1,6 +1,5 @@
 # Open-Computers
 Some basic programs for OpenComputers using debug card. Mostly in Czech.
-Everything is written in Lua for OpenComputers.
 
 ServerTeleLoop
   - Teleports all players on server randomly
